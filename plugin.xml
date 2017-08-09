@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-aliyun-pull-notification" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>AliyunPullNotification</name>
+  <description>Cordova pull notification of aliyun MNS plugin</description>
+  <license>Apache 2.0</license>
+  <keywords>cordova,aliyun,rtmp</keywords>
+  <repo>https://github.com/alucard263096/cordova-plugin-aliyun-pull-notification.git</repo>
+  <issue>https://github.com/alucard263096/cordova-plugin-aliyun-pull-notification/issues</issue>
+  <js-module name="AliyunPullNotification" src="www/AliyunPullNotification.js">
+    <clobbers target="cordova.plugins.AliyunPullNotification" />
+  </js-module>
+  <platform name="ios">
+    <config-file parent="/*" target="config.xml">
+      <feature name="AliyunPullNotification">
+        <param name="ios-package" value="AliyunPullNotification" />
+      </feature>
+    </config-file>
+    <source-file src="src/ios/AliyunPullNotification.m" />
+
+    <source-file src="src/ios/libs/CloudPushSDK.framework" framework="true" />
+    <source-file src="src/ios/libs/AlicloudUtils.framework" framework="true" />
+    <source-file src="src/ios/libs/UTDID.framework" framework="true" />
+    <source-file src="src/ios/libs/UTMini.framework" framework="true" />
+    
+    <framework src="libz.tbd" />
+    <framework src="libresolv.tbd"  />
+    <framework src="CoreTelephony.framework"  />
+    <framework src="SystemConfiguration.framework" />
+    <framework src="libsqlite3.tbd" />
+  </platform>
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="AliyunPullNotification">
+        <param name="android-package" value="cordova-plugin-aliyun-pull-notification.AliyunPullNotification" />
+      </feature>
+    </config-file>
+    <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+    <source-file src="src/android/AliyunPullNotification.java" target-dir="src/cordova-plugin-aliyun-pull-notification/AliyunPullNotification" />
+  </platform>
+</plugin>
