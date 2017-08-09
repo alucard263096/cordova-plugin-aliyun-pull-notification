@@ -1,4 +1,6 @@
-package cordova-plugin-aliyun-pull-notification;
+package AliyunPullNotification;
+
+import org.apache.cordova.CordovaPlugin;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
@@ -7,8 +9,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.content.Context;
 import android.util.Log;
-import com.alibaba.sdk.android.callback.InitResultCallback;
 import com.alibaba.sdk.android.push.CloudPushService;
 import com.alibaba.sdk.android.push.CommonCallback;
 import com.alibaba.sdk.android.push.noonesdk.PushServiceFactory;
@@ -27,10 +29,10 @@ public class AliyunPullNotification extends CordovaPlugin {
         return false;
     }
 
-    private void startPull(String message, CallbackContext callbackContext) {
+    private void startPull(String message, final CallbackContext callbackContext) {
 		try{
-
-			PushServiceFactory.init(this.cordova.getActivity().getApplicationContext());
+      Context applicationContext=this.cordova.getActivity().getApplicationContext();
+			PushServiceFactory.init(applicationContext);
 			CloudPushService pushService = PushServiceFactory.getCloudPushService();
 			pushService.register(applicationContext, new CommonCallback() {
 				@Override
@@ -44,9 +46,9 @@ public class AliyunPullNotification extends CordovaPlugin {
 					callbackContext.error("Expected one non-empty string argument.");
 				}
 			});
-		}catch(){
+		}catch(Exception ex){
             callbackContext.error("Expected one non-empty string argument.");
 		}
-		
+
     }
 }

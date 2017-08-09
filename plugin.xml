@@ -158,7 +158,7 @@
     <source-file src="src/android/libs/alicloud-android-ut-5.1.0.jar" target-dir="libs"/>
     <source-file src="src/android/libs/utdid4all-1.1.5.3_proguard.jar" target-dir="libs"/>
     
-    <source-file src="src/android/AliyunPullNotification.java" target-dir="src/cordova-plugin-aliyun-pull-notification/AliyunPullNotification" />
-    <framework src="com.aliyun.ams:alicloud-android-push:2.3.7" />
+    <source-file src="src/android/AliyunPullNotification.java" target-dir="src/AliyunPullNotification" />
+    <framework src="com.aliyun.ams:alicloud-android-push:2.+" />
   </platform>
 </plugin>
