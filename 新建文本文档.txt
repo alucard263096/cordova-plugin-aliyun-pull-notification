@@ -1,0 +1,1 @@
+ionic cordova plugin add ../cordova-plugin-aliyun-pull-notification --variable APPKEY=23745977 --variable APPSECRET=b9c3607174d922775a1186eadb1c46f4
