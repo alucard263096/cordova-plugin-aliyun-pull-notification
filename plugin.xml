@@ -7,7 +7,7 @@
   <repo>https://github.com/alucard263096/cordova-plugin-aliyun-pull-notification.git</repo>
   <issue>https://github.com/alucard263096/cordova-plugin-aliyun-pull-notification/issues</issue>
   <js-module name="AliyunPullNotification" src="www/AliyunPullNotification.js">
-    <clobbers target="cordova.plugins.AliyunPullNotification" />
+    <clobbers target="AliyunPullNotification" />
   </js-module>
   <preference name="APPKEY"  />
   <preference name="APPSECRET"  />
@@ -34,7 +34,7 @@
   <platform name="android">
     <config-file parent="/*" target="res/xml/config.xml">
       <feature name="AliyunPullNotification">
-        <param name="android-package" value="cordova-plugin-aliyun-pull-notification.AliyunPullNotification" />
+        <param name="android-package" value="AliyunPullNotification" />
       </feature>
     </config-file>
     <config-file parent="/*" target="AndroidManifest.xml">
@@ -159,6 +159,5 @@
     <source-file src="src/android/libs/utdid4all-1.1.5.3_proguard.jar" target-dir="libs"/>
     
     <source-file src="src/android/AliyunPullNotification.java" target-dir="src/AliyunPullNotification" />
-    <framework src="com.aliyun.ams:alicloud-android-push:2.+" />
   </platform>
 </plugin>
