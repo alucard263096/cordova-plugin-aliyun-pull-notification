@@ -1,4 +1,4 @@
-package AliyunPullNotification;
+package org.apache.cordova.aliyunpullnotification;
 
 import org.apache.cordova.CordovaPlugin;
 
