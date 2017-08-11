@@ -1,3 +1,5 @@
 ionic cordova plugin add ../cordova-plugin-aliyun-pull-notification --variable APPKEY=23745977 --variable APPSECRET=b9c3607174d922775a1186eadb1c46f4
 
 http://m.blog.csdn.net/xiangwang666/article/details/75081938
+
+https://stackoverflow.com/questions/36051093/create-a-customized-android-app-application-in-cordova-plugin 
